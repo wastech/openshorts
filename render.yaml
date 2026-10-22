@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: openshorts-dashboard
+    runtime: docker
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WHISPER_MODEL
+        value: base
+      - key: WHISPER_DEVICE
+        value: cpu
+      - key: WHISPER_COMPUTE
+        value: int8
+      - key: FFMPEG_ENCODER
+        value: x264
